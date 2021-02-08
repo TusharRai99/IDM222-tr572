@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #666;
+  font: 100%/1.4 "Roboto", sans-serif;
+  padding: 3rem;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+h1,
+h2 {
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  color: #5c7d91;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-align: center;
+  line-height: 0.85;
+}
+
+.standfirst {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+
+aside {
+  font-size: 0.9rem;
+}
+
+.ad {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.ad p {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 1fr;
+    grid-column-gap: 1rem;
+    padding: 1rem;
+  }
+  h1 {
+    text-align: left;
+  }
+  .standfirst {
+    font-size: 110%;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  main {
+    grid-column-start: 2;
+  }
+  aside {
+    display: none;
+  }
+  .ad {
+    grid-row-start: 2;
+    max-height: 210px;
+    max-width: 210px;
+    align-self: end;
+    justify-self: end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  img {
+    grid-template-area: image;
+  }
+  header {
+    grid-template-area: header;
+  }
+  main {
+    grid-template-area: main;
+  }
+  aside {
+    display: block;
+    grid-template-area: aside;
+  }
+  .ad {
+    grid-template-area: ad;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      ". header img"
+      "aside main"
+      ". main ad";
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+  }
+  img {
+    grid-row: 1 / span 2;
+    grid-column: span 2;
+  }
+  header {
+    grid-row: 3 / span 4;
+    grid-column: 2 / span 6;
+    flex-direction: row;
+  }
+  header h1 {
+    /*  flex-grow: 3;
+      flex-shrink: 0;
+      flex-basis: 50%; */
+    flex: 3 0 50%;
+    font-size: 900%;
+    letter-spacing: -0.08em;
+    line-height: 0.8;
+    text-align: right;
+    position: relative;
+    left: -26px;
+  }
+  h2 {
+    margin: 0;
+  }
+  main {
+    margin-top: 1rem;
+    grid-row: 5 / span 4;
+    grid-column: 5 / span 3;
+  }
+  aside {
+    display: none;
+  }
+  .ad {
+    grid-row: 6;
+    grid-column: 8;
+  }
+}
