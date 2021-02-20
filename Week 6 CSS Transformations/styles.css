@@ -1,0 +1,68 @@
+:root {
+  --duration-short: 300ms;
+  --duration-medium: 600ms;
+  --duration-long: 1000ms;
+}
+
+/* div {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  transition: all var(--duration-long) ease-in-out;
+}
+
+div:hover {
+  background-color: red;
+  height: 400px;
+  width: 600px;
+}
+
+a {
+  display: block;
+  font-size: 36px;
+  height: 200px;
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+}
+
+div:hover a {
+  color: white;
+  height: 400px;
+  padding-top: 30%;
+} */
+
+a {
+  color: blue;
+  transition: color var(--duration-short) ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: red;
+}
+
+button {
+  background-color: skyblue;
+  border: 0;
+  border-radius: 0;
+  color: black;
+  cursor: pointer;
+  padding: 1rem;
+  transition: background-color var(--duration-short) ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background-color: tomato;
+}
+
+.accordian div {
+  overflow: hidden;
+  height: 0;
+  transition: height var(--duration-long) ease-in-out;
+}
+
+.accordian div:target {
+  height: 120px;
+}

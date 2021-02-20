@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <picture>  <!--Source order matters here because if min-width 465px is evaluated first we will only see the medium kitten -->
+        <source media="(min-width:650px )" srcset="images/kitten-large.png">
+       <source media="(min-width:465px )" srcset="images/kitten-medium.png">
+    <img src="images/kitten-small.png" alt="cute Kitten">    <!--  We always start with the most basic image. -->
+    </picture>
+    </div>
+<div class="container">
+ <picture>
+     <source
+      media="(min-width:800px )"
+      sizes="50vw"
+       srcset="
+       images/lighthouse-landscape-640.jpg 640w,
+       images/lighthouse-landscape-1280.jpg 1280w,
+       images/lighthouse-landscape-2560.jpg 2560w  " />
+  <img 
+    src="images/lighthouse-160.jpg" alt="Lighthouse"
+    sizes="80vw"
+    srcset="
+    images/lighthouse-160.jpg 160w,
+    images/lighthouse-320.jpg 320w,
+    images/lighthouse-640.jpg 640w,
+    images/lighthouse-1280.jpg 1280w"
+    >
+</picture>  
+<img src="" alt="">
+<div class="container">
+    <picture>
+        <source type="image/webp" srcset="images/loading-dock.webp">
+        <img src="images/loading-dock.jpg" alt="loading-dock">
+    </picture>
+</div>
+</div>
+
+</body>
+</html>
