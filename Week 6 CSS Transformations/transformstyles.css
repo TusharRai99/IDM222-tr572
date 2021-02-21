@@ -1,0 +1,89 @@
+:root {
+  --duration-short: 300ms;
+  --duration-medium: 600ms;
+  --duration-long: 1000ms;
+}
+/* 
+img {
+  width: 100%;
+  margin: 0 auto;
+  transition: 2s;
+}
+
+.rotate:hover {
+  transform: rotateY(180deg);
+} */
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1,
+h2,
+p {
+  opacity: 0;
+}
+
+h1 {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+h2 {
+  animation: fadeIn 3s ease-in-out 1s forwards;
+}
+
+p {
+  animation: fadeIn 3s ease-in-out 2s forwards;
+} */
+
+@keyframes moveRight {
+  from {
+    color: blue;
+    margin-left: 0;
+  }
+  to {
+    color: red;
+    margin-left: 60%;
+  }
+}
+
+h1 {
+  animation: moveRight 3s ease-in-out 2s infinite alternate;
+}
+
+@keyframes crazy {
+  0% {
+    left: 0;
+    top: 0;
+    color: blue;
+  }
+  20% {
+    left: 90%;
+    top: 30%;
+    color: red;
+    opacity: 1;
+  }
+  80% {
+    left: 40%;
+    top: 60%;
+    color: green;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    color: purple;
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+}
+
+h2 {
+  opacity: 0;
+  animation: crazy 1s linear infinite;
+  position: absolute;
+}
