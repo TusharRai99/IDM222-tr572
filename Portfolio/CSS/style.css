@@ -10,22 +10,29 @@ body {
   margin: 0;
 }
 main {
-  padding: 3rem;
-  background: url(/Portfolio/images/Backgrounds/Phone/Phone\ Body\ X.png)
-    no-repeat;
+  padding: 2rem;
+  /* background: url(/Portfolio/images/Backgrounds/Phone/Phone\ Body\ X.png) */
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 header {
   background-color: #f83d0c;
-  padding: 0.7rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
   color: white;
   height: 100vh;
   font-weight: 400;
   text-align: center;
-  background: url(/Portfolio/images/Backgrounds/Phone/Phone\ Landing\ Page.png)
-    no-repeat;
+  /* background: url(/Portfolio/images/Backgrounds/Phone/Phone\ Landing\ Page.png) */
 }
 
 header h1 {
+  padding-left: 1.5rem;
   text-align: left;
   margin: 1rem 0 auto;
   font-size: 6rem;
@@ -35,6 +42,10 @@ header h1 {
   position: relative;
   top: 12rem;
   background-color: rgba(255, 255, 255, 0);
+}
+
+header h1:hover {
+  transform: scale(1.2);
 }
 
 header h4 {
